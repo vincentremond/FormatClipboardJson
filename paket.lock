@@ -1,0 +1,5 @@
+STORAGE: NONE
+RESTRICTION: == net7.0-windows7.0
+NUGET
+  remote: https://api.nuget.org/v3/index.json
+    Newtonsoft.Json (13.0.3)
