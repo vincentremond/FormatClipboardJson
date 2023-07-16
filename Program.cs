@@ -18,11 +18,21 @@ internal static class Program
             var contentObject = JsonConvert.DeserializeObject(content);
             var newContent = JsonConvert.SerializeObject(contentObject, Formatting.Indented);
             Clipboard.SetText(newContent);
-            MessageBox.Show($"done (original lenth:{content.Length}, new length: {newContent.Length}");
+            MessageBox.Show(
+                text: $"Json formatted (original length:{content.Length}, new length: {newContent.Length}",
+                caption: "Format Clipboard Json (success)",
+                buttons: MessageBoxButtons.OK,
+                icon: MessageBoxIcon.Information
+            );
         }
         catch (Exception e)
         {
-            MessageBox.Show(e.ToString());
+            MessageBox.Show(
+                text: e.ToString(),
+                caption: "Format Clipboard Json (error)",
+                buttons: MessageBoxButtons.OK,
+                icon: MessageBoxIcon.Error
+            );
         }
     }
 }
