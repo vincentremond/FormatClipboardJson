@@ -3,4 +3,4 @@
 dotnet tool restore
 dotnet build -- %*
 
-add-to-path bin\Debug\
+AddToPath .\bin\Debug\
